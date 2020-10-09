@@ -1,5 +1,5 @@
 # AtmosphereMonitor
-Code for devices XBee + BME280
+Code for devices XBee3 + BME280
 
 By default, XBee device sends payload to a coordinator (64-bit Address {0X00}). 
 - This can be changed to an explicit address in main.py by changing **TARGET_64BIT_ADDR = b'\x00\x00\x00\x00\x00\x00\x00\x00'** to the desired address (e.g. \x00\x13\xA2\x20....etc)
@@ -30,10 +30,11 @@ By default, XBee device sends payload to a coordinator (64-bit Address {0X00}).
 - PyCharm XBee MicroPython plugin: https://plugins.jetbrains.com/plugin/12445-xbee-micropython
 - Digi MicroPython Programming Guide: https://www.digi.com/resources/documentation/digidocs/PDFs/90002219.pdf  - Pycharm plugin info begins on page 32
 - Basic XBee XCTU tutorials: https://www.youtube.com/playlist?list=PL2MfcBwemUMscK12JcMxgHKZu0ZUGRizO
-- ToDo: Create tutorial video for this project
+
+*ToDo: Create tutorial video for this project*
 
 # Instructions
-Before you begin, verify that XBee radios can be discovered in XCTU. If not, fundamental troubleshooting is required, which is beyond the scope of this document. If you don't know how to do this, check out my tutorial here: https://youtu.be/AemzSO5EDy0
+Before you begin, verify that the XBee radios can be discovered in XCTU. If not, fundamental troubleshooting is required, which is beyond the scope of this document. If you don't know how to do this, check out my tutorial here: https://youtu.be/AemzSO5EDy0
 1. Assemble the endpoint sensor hardware
 2. Configure XBee radio settings (XCTU)
 2. Format XBee radio file system
@@ -48,6 +49,8 @@ This is a very standard/simple I2C implementation.
 |  DI11 | SDA  |
 | 3.3V  | 3.3V  |
 | GND  | GND  |
+
+If you want to run this on battery power, I'll leave it to you to figure out how to splice in 3V power from the battery
 
 *ToDo: create fritz and add it here*
 
@@ -100,6 +103,8 @@ Using Pycharm with plugin
 4. Click Run (arrow)
 5. main.mpy and BME270.mpy will be flashed to radio
 6. Endpoint Sensor radio will soft reboot
+
+*ToDo: Create tutorial on how to load a file system OTA. Useful/necessary for implementation using SMT versionsof XBee3
 
 ### Reset XBee radio and monitor Coordinator's console
 In XCTU, select Coordinator, then click Console.
