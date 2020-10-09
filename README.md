@@ -90,12 +90,12 @@ Using XCTU
 PyCharm *might* prompt you to format the file system when you connect to a radio. If so, that's fine, go for it.
 
 ### Load code into XBee radio file system
-Using XCTU
+**Using XCTU**
 1. On the "Remote path" side of the window, you should see "Remote path: /flash", a folder called "lib", and nothing else. This indicates that the file system was formatted properly. If this is not the case, go ahead and click the "Format" icon to re-format the file system.
 2. On the "Local path" side of the window, navigate to the "AtmosphereMonitor" folder on your computer.
 3. Click and drag BME280.py and main.py to the remote window. After uploading, the files should appear below the lib folder.
 
-Using Pycharm with plugin
+**Using Pycharm with plugin**
 1. Open AtmosphereMonitor project in PyCharm
 2. Check External Libraries to ensure XBee MicroPython is present. If not, see below for instructions to enable it.
 2. Set correct COM port for the Endpoint Sensor
@@ -105,7 +105,7 @@ Using Pycharm with plugin
 5. main.mpy and BME270.mpy will be flashed to radio
 6. Endpoint Sensor radio will soft reboot
 
-Setup XBee Micropython in PyCharm
+**Setup XBee Micropython in PyCharm**
 1. Make sure plugin is installed File->Settings->Plugins, then search for "Xbee Micropython". If it is not installed, do so now.
 2. Enable plugin for the project File->Settings->Project:<CurrentProjectName>(AtmosphereMonitor, in this case)->XBee MicroPython, then check the box "Enable XBee MicroPython support" and click OK.
 3. Two dropdown boxes appear in the toolbar.
