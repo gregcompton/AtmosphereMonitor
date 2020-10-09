@@ -17,7 +17,7 @@ By default, XBee device sends payload to a coordinator (64-bit Address {0X00}).
 - USB Mini-B Cable - https://www.sparkfun.com/products/11301  - There is nothing special about this cable. If you have one already, then use it.
 - Battery (optional)
     - Coin cell battery - Any 3V battery will work. 
-    - If the Exploer is used, then a higher voltage (up to 5V) battery could be used. 
+    - If the Explorer is used, then a higher voltage (up to 5V) battery could be used. 
     - Note: If using the Explorer's 5V input, the voltage regulator will cause the setup to draw significantly more current in sleep mode (5V sleep = .370 mA vs 3V sleep = .015 mA). 
 
 ## Software 
@@ -27,8 +27,10 @@ By default, XBee device sends payload to a coordinator (64-bit Address {0X00}).
 *ToDo: Create XBee Micropython PyCharm Plugin tutorial*
 
 ## Resources
+- PyCharm XBee MicroPython plugin: https://plugins.jetbrains.com/plugin/12445-xbee-micropython
 - Digi MicroPython Programming Guide: https://www.digi.com/resources/documentation/digidocs/PDFs/90002219.pdf  - Pycharm plugin info begins on page 32
-- ToDo: Add link to youtube tutorial video
+- Basic XBee XCTU tutorials: https://www.youtube.com/playlist?list=PL2MfcBwemUMscK12JcMxgHKZu0ZUGRizO
+- ToDo: Create tutorial video for this project
 
 # Instructions
 Before you begin, verify that XBee radios can be discovered in XCTU. If not, fundamental troubleshooting is required, which is beyond the scope of this document. If you don't know how to do this, check out my tutorial here: https://youtu.be/AemzSO5EDy0
