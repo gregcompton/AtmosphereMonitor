@@ -63,14 +63,14 @@ It is conceivable to set all of these programmatically at run time, in main.py, 
 - AP=2
 - PS=1
 - SM=6
-- NI=Endpoint (this is optional, but I find it easier to name the radios when I'm working with many of them)
+- NI=Endpoint (this is optional, but I find it easier to name the radios when I'm working with several of them at the same time)
 - BD=9600 (NOTE: you might try increasing this up to a max of 115200 if you have difficulties working with the file system. **DO NOT** go higher than this or things become unstable)
 
 **Coordinator**
 - CE=1
 - AP=2
 - NJ=FF (FF keeps the join window open forever. This is useful for testing. However, it should be changed to FE (or lower) for field deployment.
-- NI=Coordinator (this is optional, but I find it easier to name the radios when I'm working with many of them)
+- NI=Coordinator (this is optional, but I find it easier to name the radios when I'm working with several of them at the same time)
 
 Finally, test that Endpoint has joined Coordinator's PAN by sending a Hello World message. 
 
@@ -97,12 +97,20 @@ Using XCTU
 
 Using Pycharm with plugin
 1. Open AtmosphereMonitor project in PyCharm
+2. Check External Libraries to ensure XBee MicroPython is present. If not, see below for instructions to enable it.
 2. Set correct COM port for the Endpoint Sensor
 3. Set the Project to AtmosphereMonitor folder
 3. Click Build (hammer)
 4. Click Run (arrow)
 5. main.mpy and BME270.mpy will be flashed to radio
 6. Endpoint Sensor radio will soft reboot
+
+Setup XBee Micropython in PyCharm
+1. Make sure plugin is installed File->Settings->Plugins, then search for "Xbee Micropython". If it is not installed, do so now.
+2. Enable plugin for the project File->Settings->Project:<CurrentProjectName>(AtmosphereMonitor, in this case)->XBee MicroPython, then check the box "Enable XBee MicroPython support" and click OK.
+3. Two dropdown boxes appear in the toolbar.
+4. If you are unable to select an XBee device in the first dropdown, click the build icon(hammer). Now you can "Discover and select XBee device" very much like in XCTU.
+5. Finished
 
 *ToDo: Create tutorial on how to load a file system OTA. Useful/necessary for implementation using SMT versionsof XBee3
 
